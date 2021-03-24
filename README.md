@@ -6,7 +6,7 @@ Program is run by entering ``` npm riveshell ./bot ``` from the root directory. 
 If you would like to stop chatting, enter ``` /quit ```
 
 ## Notes
-If you would like to see the dialogue options that the user has with the bot, see /bot/begin.rive
+If you would like to see the dialogue options that the user has with the bot, see ``` /bot/begin.rive ```
 
 
 ### Commands to start a conversation

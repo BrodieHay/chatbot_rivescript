@@ -1,0 +1,23 @@
+{
+  "name": "chatbot_rivescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "dependencies": {
+    "rivescript": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrodieHay/chatbot_rivescript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrodieHay/chatbot_rivescript/issues"
+  },
+  "homepage": "https://github.com/BrodieHay/chatbot_rivescript#readme"
+}

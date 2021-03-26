@@ -16,4 +16,5 @@ npx riveshell ./bot
 ```
 ## External Resources
 Rivescript-JS - Documentation and github page here: https://github.com/aichaos/rivescript-js
+
 The Rivescript tutorial I followed here: https://www.rivescript.com/docs/tutorial

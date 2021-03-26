@@ -11,8 +11,6 @@ bot.loadFile("brain/testsuite.rive").then(loading_done).catch(loading_error);
 // for the web!)
 bot.loadFile([
   "brain/begin.rive",
-  "brain/admin.rive",
-  "brain/clients.rive"
 ]).then(loading_done).catch(loading_error);
 
 // All file loading operations are asynchronous, so you need handlers

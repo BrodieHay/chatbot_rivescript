@@ -1,0 +1,77 @@
+! version = 2.0
+
++ hello
+- Thank you for calling swiftly, this is <bot name>, what is your name?{topic=getfullname}
+
++ hey
+@ hello
+ 
++ hi
+@ hello
+
+> topic getfullname
+  + *
+  - Im sorry, I didn't catch that, can I please have your first and last name?
+
+  + my first name is * and my last name is *
+  - <set firstname={formal}<star1>{/formal}><set lastname={formal}<star2>{/formal}>Thank you <star1> <star2>. And just incase we get disconnected for any reason, is the best number on which to reach you the same number you are calling from now?{topic=checkphonenumber}
+
+  + my first name is * 
+  - <set firstname={formal}<star>{/formal}>Thank you <star>, and what is your last name?{topic=getlastname}
+
+  + my last name is *
+  - <set lastname={formal}<star>{/formal}> Thank you, and could I please get your first name?{topic=getfirstname}
+> topic
+
+> topic getfirstname
+  + *
+  - Im sorry, I didn't catch that, can I please have your first name?
+
+  + my first name is *
+  - <set firstname={formal}<star>{/formal}>Thank you <star>. And just incase we get disconnected for any reason, is the best number on which to reach you the same number you are calling from now?{topic=checkphonenumber}
+> topic
+
+> topic getlastname
+  + *
+  - Im sorry, I didn't catch that, can I please have your last name?
+
+  + my last name is *
+  - <set lastname={formal}<star>{/formal}>Thank you <get firstname>. And just incase we get disconnected for any reason, is the best number on which to reach you the same number you are calling from now?{topic=checkphonenumber}
+< topic
+
+> topic checkphonenumber
+  + *
+  - I'm sorry, can you repeat that?
+
+  + (yes|it is|correct|that is right|thats right)
+  - Great! Are you an existing swiftly customer?{topic=checkcustomer}
+
+  + (no|nah|nope|fogetahboutit|wrong|incorrect)
+  - No problem! Can you let me know the best number to reach you at?{topic=getphonenumber}
+< topic
+
+> topic getphonenumber
+  + *
+  - Im sorry, I didnt quite catch that, can you repeat it?
+
+  + my phone number is *
+  - <set phoneNumber==<star>>Thank you very much! Are you an existing swiftly customer?{topic=checkcustomer}
+< topic
+
+> topic checkcustomer
+  + *
+  - I'm sorry, can you repeat that?
+
+  + (yes|it is|correct|that is right|thats right)
+  - <set currentCustomer==True>Great! Thank you <get firstname>. How can I help you today?{topic=random}
+
+  + (no|nah|nope|fogetahboutit|wrong|incorrect)
+  - <set currentCustomer==False>Great! Thank you <get firstname>. How can I help you today?{topic=random}
+< topic
+
++ *
+- Sorry did not get what you said
+- I am afraid that i can not understand you
+- I did not get it
+- Sorry can you please elaborate that for me
+
